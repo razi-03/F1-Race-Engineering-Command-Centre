@@ -1,0 +1,19 @@
+[project]
+name = "f1-race-engineering-command-centre"
+version = "1.0.0"
+description = "Streamlit + Plotly race-strategy dashboard powered by a weather/track/lap ETL pipeline and a lap-delta model."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501", "E702", "B905"]
